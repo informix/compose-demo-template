@@ -9,7 +9,7 @@ services:
           SIZE:    'small'
           RUN_FILE_PRE_INIT: pre_setup.sh
           RUN_FILE_POST_INIT: post_setup.sh
-          CONFIGURE_INIT: no
+          CONFIGURE_INIT: 'no'
       ports:
          - 27018:27018
       volumes: 
