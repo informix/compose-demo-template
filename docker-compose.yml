@@ -1,0 +1,19 @@
+version: '3'
+services:
+  informix-server1:
+      image: "ibmcom/informix-developer-database"
+      container_name: "server1"
+      hostname: "server1"
+      environment:
+          LICENSE: 'accept'
+          SIZE:    'small'
+          RUN_FILE_PRE_INIT: pre_setup.sh
+          RUN_FILE_POST_INIT: post_setup.sh
+          CONFIGURE_INIT: no
+      ports:
+         - 27018:27018
+      volumes: 
+         - ${PWD}/informix-server:/opt/ibm/config
+
+
+
